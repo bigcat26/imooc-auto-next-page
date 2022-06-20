@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "幕课网自动播放下一页",
+    "version": "1.0",
+    "description": "慕课网课视频播放结束时自动切换到下一页",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+    ],
+	"host_permissions": [
+		"*://*.imooc.com/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["*://*.imooc.com/*"],
+			"js": ["js/imooc.js"],
+			"run_at": "document_end"
+		}
+	]
+}
